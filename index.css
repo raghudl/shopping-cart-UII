@@ -1,0 +1,83 @@
+#header{
+	background-color:orange;
+	margin-left:52px;
+	margin-right:100px;
+	width: 91.5%;
+	height: 80px;
+	text-align: center;
+	font-weight: 20px;
+	background-color:#FFA500;
+}
+.images{
+	float:left; 
+	border-bottom:1px solid #000;
+	 border-right:1px solid #000;
+	 border:solid 2px green;
+}
+.right_panel{
+	width:30%;
+	height: 500px;
+	border:double 3px #FF3300;
+	background-color:#336;
+
+}
+.lineItem {
+		border:solid 2px #A0A0A0 ;
+		margin-left: 20px;
+		width: 95% ;
+		background-color:#606060 ;
+}
+#cart{
+	height : 800px;
+	float:right;
+	margin-right:800px;
+	margin-top: 500;
+	background-color:red;
+}
+.body{
+	border:solid 2px green;
+	margin-left: 20px;  
+	width: 95% ;
+	height: 469px;
+	 border: double 3px;
+	 background-color:orange;
+}
+.Selecteditems{
+	border:solid 2px #A0A0A0 ;
+	margin-left: 20px;
+	width: 95% ;
+	background-color:#606060 ;
+}
+.hbody{
+	border:solid 3px green;
+	margin-left: 52px; 
+	 width: 91% ;
+	 height: 345px;
+	 border: double 3px;
+	 background-color:#606060;
+}
+#himage{
+	float:left; 
+	border-bottom:1px solid #000;
+	 border-right:1px solid #000;
+	 background-color:#C0C0C0;
+
+}
+#footer{
+	border:solid 2px #A0A0A0 ;
+		margin-left: auto;
+		width: 100% ;
+		background-color:#606060 ;
+   margin-top: 600px;
+   height: 23px;
+   text-align: center;
+}
+#footerr{
+	border:solid 2px #A0A0A0 ;
+		margin-left: auto;
+		width: 100% ;
+		background-color:#606060 ;
+   margin-top: 100px;
+   height: 23px;
+   text-align: center;
+}
