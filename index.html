@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <title>Shopping cart application</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css"> 
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+    
+</head>
+
+  
+
+<script type="text/x-handlebars" data-template-name="index">
+<div>
+<div id="header" style="background-color:#FFA500;">
+       <h1 style="margin-bottom:0;">shopping cart UI</h1>
+       <div style="float:right; margin-right:67px;">
+        {{#link-to ''}}<b>cart</b><input type="image" src="js/images/cart.jpg" style= "width:35px;height:35px;"{{action 'displayrecords'}}  value="cart"/>{{count}} </input>
+       {{/link-to}}
+</div>
+</div>
+
+ <div class = "hbody">      
+ {{#each}}
+            <div id="himage">
+
+               <img {{bind-attr src=logoUrl}} alt="Logo" height="120" width="100" >
+               <label>name:</label>{{name}}<br>
+               <label>Discription:</label>{{Discription}}<br>
+              <label> Price :</label> {{price}}
+              
+
+               <input type="button" id="addrecord" {{ action 'addCart' id name logoUrl Discription price}}  value="Add_To_cart" title="ADD"/>
+                </div> 
+{{/each}}
+<div><footer id="footer"> Copyright@Vecima Telecom
+</footer></div>
+{{outlet}}
+
+</script>
+
+
+
+
+<script type="text/x-handlebars" data-template-name="arrayitems">
+
+<div class ="lineItem"> Total Items :::{{model.length}}</div>
+ <div class = "body">      
+    {{#each}}
+            <div class="images">
+                     <img {{bind-attr src=logoUrl}} alt="Logo" height="150" width="100" >
+                     <label>name:</label>{{name}}<br>
+                     <label> Price : {{price}}</label>
+                     ID::::{{id}}
+    <button {{ action 'removeItem'  id}} > Remove</button>
+     
+             </div>         
+  {{/each}}                       
+  </div>                      
+
+            
+  <div> 
+  <div class="Selecteditems" >Selected items:</div>
+ <table border=2 style="margin-left: 20px;border:solid 2px green;" >
+              <tr>
+              <th>name</th>
+              <th>Quantity</th>
+               <th>Discription</th>
+               <th>price</th>
+               <th>discount</th>
+               
+              </tr>
+
+              {{#each}}
+              <tr>
+              <td>{{name}} </td>
+              <td>1</td>
+              <td>{{Discription}}</td>
+              <td>{{price}}</td>
+              <td>20%</td>
+              </tr>
+
+               {{/each}}
+  </div>    
+  </table>      
+  <div><footer id="footer"> Copyright@Vecima Telecom
+</footer></div>
+
+</script>
+
+
+
+
+  <script src = "js/application.js"></script>
+  <script src = "router/router.js"></script>
+  <script src = "js/models/model.js"></script>
+  <script src = "js/controllers/cartController.js"></script>
+   
+  </script>
+  </html>
